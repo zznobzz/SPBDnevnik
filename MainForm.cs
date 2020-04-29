@@ -47,7 +47,7 @@ namespace SPBDnevnik
             }
         }
 
-        private  async void debug2BTN_Click(object sender, EventArgs e)
+        private async void debug2BTN_Click(object sender, EventArgs e)
         {
             debugRTB.Text = "";
             string dateFrom = $"&p_datetime_from={fromDTP.Value.ToShortDateString()}";
@@ -59,13 +59,13 @@ namespace SPBDnevnik
             var lessonJSON = JsonWorker.FromJson(json);
             foreach (var item in lessonJSON.Data.Items)
             {
-                debugRTB.Text +=  "--------------------------------\n";
-                debugRTB.Text += item.SubjectName + "\n" + item.DatetimeFrom + "\n" + item.ContentName +"\n"
-                    + item.ContentDescription +"\n";
+                debugRTB.Text += "--------------------------------\n";
+                debugRTB.Text += item.SubjectName + "\n" + item.DatetimeFrom + "\n" + item.ContentName + "\n"
+                    + item.ContentDescription + "\n";
                 debugRTB.Text += "Задания:  \n";
                 foreach (var task in item.Tasks)
                 {
-                    debugRTB.Text += "*----" + task.TaskKindName +"\n";
+                    debugRTB.Text += "*----" + task.TaskKindName + "\n";
                     debugRTB.Text += task.TaskName + "\n";
                     foreach (var file in task.Files)
                     {

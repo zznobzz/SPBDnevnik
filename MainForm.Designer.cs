@@ -149,6 +149,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.debugRTB.Location = new System.Drawing.Point(4, 50);
             this.debugRTB.Name = "debugRTB";
+            this.debugRTB.ReadOnly = true;
             this.debugRTB.Size = new System.Drawing.Size(948, 479);
             this.debugRTB.TabIndex = 1;
             this.debugRTB.Text = "";
